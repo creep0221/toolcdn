@@ -105,10 +105,10 @@
         k0 || s || r || T || p("wait")
     }
     var X, K, Q = JSON.parse("true"),
-        Z = Number("15000");
+        popupWait = Number("15000");
 
     function m() {
-        Q && (clearInterval(X), X = setInterval(W, Z))
+        Q && (clearInterval(X), X = setInterval(W, popupWait))
     }
 
     function h(t, e, o = 3e3) {
@@ -131,7 +131,7 @@
         var t = document.querySelector("iframe");
         return !!t && !!(t.contentDocument || t.contentWindow.document).querySelector(".chamo-main-customer")
     }
-    Q && (X = setInterval(W, Z)), "0f6579ed-f3c8-4dcd-b21d-cccd04e25e06" !== a && "b0d822d7-8346-4015-a629-c15751efe261" !== a || h(function() {
+    Q && (X = setInterval(W, popupWait)), "0f6579ed-f3c8-4dcd-b21d-cccd04e25e06" !== a && "b0d822d7-8346-4015-a629-c15751efe261" !== a || h(function() {
         var t = document.querySelector(".wc-webchat-ctn");
         return t && "open" === t.getAttribute("status")
     }, m), "455d4413-35f0-403b-bced-da8add47dc90" === a && h(function() {
