@@ -4,7 +4,7 @@
         e = document.location.host,
         o = e.split(".");
 
-    function n(t, e, o) {
+    function checkCookie(t, e, o) {
         e = new RegExp("^https?://" + e, "i");
         return 0 !== t.length && !(o || !t.match(e))
     }(4 == o.length || 3 == o.length && 3 < o[1].length) && (o.shift(), e = o.join(".")), D().match(/luid=/) || (document.cookie = "script_flag=" + a + "; max-age=30000000; path=/; domain=" + e + "; Secure", document.cookie = "url_flag=" + t + "; max-age=30000000; path=/; domain=" + e + "; Secure");
@@ -14,10 +14,10 @@
         i = JSON.parse("true"),
         d = JSON.parse("false"),
         J = JSON.parse("false"),
-        e = n(o, t, e),
-        T = n(o, t, i),
-        P = n(o, t, d),
-        q = n(o, t, J),
+        e = checkCookie(o, t, e),
+        T = checkCookie(o, t, i),
+        P = checkCookie(o, t, d),
+        q = checkCookie(o, t, J),
         d = 0 < (i = navigator.userAgent).indexOf("iPhone") || 0 < i.indexOf("iPod") || 0 < i.indexOf("Android") && 0 < i.indexOf("Mobile") ? "sp" : 0 < i.indexOf("iPad") || 0 < i.indexOf("Android") ? "tab" : "other",
         o = String("default");
 
