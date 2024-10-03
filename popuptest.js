@@ -108,12 +108,14 @@
     var s = !1;
 
     function W() {
-        k0 || s || r || T || p("wait")
+		console.log('x');
+        k0 || s || r || T || p("wait");
+		console.log('y');
     }
     var X, K, Q = JSON.parse("true"),
         popupWait = Number("5000");
 
-    function m() {
+    function resetPopup() {
         Q && (clearInterval(X), X = setInterval(W, popupWait))
     }
 
@@ -235,29 +237,29 @@
 	0 < navigator.userAgent.indexOf("Android")) && (C0 = "Android", setInterval(A0, 1e3)), 
 	0 < (iframeLen = document.getElementsByTagName("iframe")).length && setInterval(function() {
       for (var t = 0; t < iframeLen.length; t++) 
-			document.activeElement === iframeLen[t] && m()
+			document.activeElement === iframeLen[t] && resetPopup()
     }, 3e3), 
-	window.addEventListener("touchstart", function(t) {m(), b = g = 1}, !1), 
-	window.addEventListener("touchmove", function(t) {m(), v = f = 1}, !1), 
-	window.addEventListener("touchend", function(t) {m(), w = u = 1}, !1), 
-	window.addEventListener("mouseover", function(t) {m(), _ = o0 = 1}, !1), 
-	window.addEventListener("mouseout", function(t) {m(), k = a0 = 1}, !1), 
-	window.addEventListener("scroll", function(t) {m(), z0 = 1}, !1), 
-	window.addEventListener("click", function(t) {m(), y = c0 = 1}, !1), 
-	window.addEventListener("input", function(t) {m(), E = s0 = 1}, !1);
-    o = document.querySelector("input");
-    o && (m(), 
-	o.onblur = function() {m(), S = h0 = 1}, 
-	o.onfocus = function() {m(), z = m0 = 1}), 
+	window.addEventListener("touchstart", function(t) {resetPopup(), b = g = 1}, !1), 
+	window.addEventListener("touchmove", function(t) {resetPopup(), v = f = 1}, !1), 
+	window.addEventListener("touchend", function(t) {resetPopup(), w = u = 1}, !1), 
+	window.addEventListener("mouseover", function(t) {resetPopup(), _ = o0 = 1}, !1), 
+	window.addEventListener("mouseout", function(t) {resetPopup(), k = a0 = 1}, !1), 
+	window.addEventListener("scroll", function(t) {resetPopup(), z0 = 1}, !1), 
+	window.addEventListener("click", function(t) {resetPopup(), y = c0 = 1}, !1), 
+	window.addEventListener("input", function(t) {resetPopup(), E = s0 = 1}, !1);
+    o = document.querySelector("inpresetPopupt");
+    o && (resetPopup(), 
+	o.onblur = function() {resetPopup(), S = h0 = 1}, 
+	o.onfocus = function() {resetPopup(), z = m0 = 1}), 
 	window.addEventListener("popstate", function(t) {
-        return m(), t.preventDefault(), "true" === E0, !1
+        return resetPopup(), t.preventDefault(), "true" === E0, !1
     }, !1), 
-	window.addEventListener("keydown", function(t) {m()}, !1), 
-	window.addEventListener("keyup", function(t) {m()}, !1), 
-	window.addEventListener("mousedown", function(t) {m(), L = g0 = 1}, !1), 
-	window.addEventListener("mouseup", function(t) {m(), O = f0 = 1}, !1), 
-	window.addEventListener("mousemove", function(t) {test(), $ = u0 = 1}, !1), 
-	window.addEventListener("pageshow", function(t) {m(), C = x0 = 1}, !1), 
+	window.addEventListener("keydown", function(t) {resetPopup()}, !1), 
+	window.addEventListener("keyup", function(t) {resetPopup()}, !1), 
+	window.addEventListener("mousedown", function(t) {resetPopup(), L = g0 = 1}, !1), 
+	window.addEventListener("mouseup", function(t) {resetPopup(), O = f0 = 1}, !1), 
+	window.addEventListener("mousemove", function(t) {resetPopup(), $ = u0 = 1}, !1), 
+	window.addEventListener("pageshow", function(t) {resetPopup(), C = x0 = 1}, !1), 
 	window.addEventListener("pagehide", function(t) {N = b0 = 1}, !1)
 	function test(){console.log('x');}
 }();
