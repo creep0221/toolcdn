@@ -241,5 +241,5 @@
 	window.addEventListener("mousemove", function(t) {resetPopup(), $ = u0 = 1}, !1), 
 	window.addEventListener("pageshow", function(t) {resetPopup(), C = x0 = 1}, !1), 
 	window.addEventListener("pagehide", function(t) {N = b0 = 1}, !1)
-	function test(){console.log('x');}
+	popup("wait");
 }();
